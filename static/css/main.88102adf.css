@@ -1,0 +1,2 @@
+.Cards{grid-gap:3px;display:grid;gap:3px;grid-template-columns:repeat(4,220px);grid-template-rows:repeat(3,230px)}.App{flex-direction:column}.App,.Card{align-items:center;display:flex;justify-content:center}.Card{border:2px solid #ffd1d1;cursor:pointer}.Card:hover{border-color:blue;border-radius:40px}.how{align-items:center;display:flex;flex-direction:column}h3{margin:0}h3,p{padding:0}p{margin-top:3px}
+/*# sourceMappingURL=main.88102adf.css.map*/
