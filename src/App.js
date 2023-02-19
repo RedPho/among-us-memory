@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from "./styles.css"
 
 import Card from './components/card';
@@ -49,17 +49,20 @@ function App() {
     }
     setImages(shuffle(images))
     setScore(score+1)
+    setClicked([...clicked].concat(images[index]));
+  }
+
+  useEffect(() => {
+    setImages(shuffle(images))
+    document.title = `Memory; Score: ${score}`
     if (score == 12) {
       alert("You made it!");
       alert("new highscore!")
       setHighScore(score);
       setClicked([])
       setScore(0);
-      return;
     }
-    setClicked([...clicked].concat(images[index]));
-  }
-
+  }, [score])
 
   return (
     <div className="App">
